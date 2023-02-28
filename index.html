@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Widget | baodaigov.github.io</title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script type="text/javascript" src="./weather-data.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0">
+	<div class="wrapper">
+		<div class="weather-header">
+			<p class="weatherheader">Sai Gon City</p>
+			<div class="weather">
+				<i class="fa-solid fa-sun-bright"></i>
+				<div class="weather-content">
+					<p class="weather-degree"></p>
+					<div class="weather-changetype">
+						<span class="celsius selected">°C</span><span class="separator">|</span><span class="fahrenheit">°F</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="weather-degreehighandlow">
+			<span class="highest-temp"></span><span class="lowest-temp"></span>
+		</div>
+	</div>
+</body>
+</html>
