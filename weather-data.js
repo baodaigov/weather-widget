@@ -23,7 +23,78 @@ const showWeather = () => {
             $(".lowest-temp").text(`${(data.days[0].tempmin * 9 / 5 + 32).toFixed()}`)
             $(".celsius").removeClass("selected");
             $(".fahrenheit").addClass("selected");
-        })
+        });
+        var weathericon = data.days[0].icon;
+        switch (weathericon) {
+            case "clear-day":
+                $('<i class="fa-solid fa-sun-bright">').insertBefore(".weather-content");
+                break;
+            case "clear-night":
+                $('<i class="fa-solid fa-moon"></i>').insertBefore(".weather-content");
+                break;
+            case "cloudy":
+                $('<i class="fa-solid fa-clouds"></i>').insertBefore(".weather-content");
+                break;
+            case "fog":
+                $('<i class="fa-solid fa-cloud-fog"></i>').insertBefore(".weather-content");
+                break;
+            case "hail":
+                $('<i class="fa-solid fa-cloud-hail"></i>').insertBefore(".weather-content");
+                break;
+            case "partly-cloudy-day":
+                $('<i class="fa-solid fa-clouds-sun"></i>').insertBefore(".weather-content");
+                break;
+            case "partly-cloudy-night":
+                $('<i class="fa-solid fa-clouds-moon"></i>').insertBefore(".weather-content");
+                break;
+            case "rain-snow-showers-day":
+                $('<i class="fa-solid fa-snowflake-droplets"></i>').insertBefore(".weather-content");
+                break;
+            case "rain-snow-showers-night":
+                $('<i class="fa-solid fa-snowflake-droplets"></i>').insertBefore(".weather-content");
+                break;
+            case "rain-snow":
+                $('<i class="fa-solid fa-snowflake-droplets"></i>').insertBefore(".weather-content");
+                break;
+            case "rain":
+                $('<i class="fa-solid fa-cloud-rain"></i>').insertBefore(".weather-content");
+                break;
+            case "showers-day":
+                $('<i class="fa-solid fa-cloud-sun-rain"></i>').insertBefore(".weather-content");
+                break;
+            case "showers-night":
+                $('<i class="fa-solid fa-cloud-moon-rain"></i>').insertBefore(".weather-content");
+                break;
+            case "sleet":
+                $('<i class="fa-solid fa-cloud-sleet"></i>').insertBefore(".weather-content");
+                break;
+            case "snow-showers-day":
+                $('<i class="fa-solid fa-cloud-snow"></i>').insertBefore(".weather-content");
+                break;
+            case "snow-showers-night":
+                $('<i class="fa-solid fa-cloud-snow"></i>').insertBefore(".weather-content");
+                break;
+            case "snowd":
+                $('<i class="fa-solid fa-cloud-snow"></i>').insertBefore(".weather-content");
+                break;
+            case "thunder-rain":
+                $('<i class="fa-solid fa-cloud-bolt"></i>').insertBefore(".weather-content");
+                break;
+            case "thunder-showers-day":
+                $('<i class="fa-solid fa-cloud-bolt-sun"></i>').insertBefore(".weather-content");
+                break;
+            case "thunder-showers-night":
+                $('<i class="fa-solid fa-cloud-bolt-moon"></i>').insertBefore(".weather-content");
+                break;
+            case "thunder":
+                $('<i class="fa-solid fa-bolt"></i>').insertBefore(".weather-content");
+                break;
+            case "wind":
+                $('<i class="fa-solid fa-wind"></i>').insertBefore(".weather-content");
+                break;
+            default:
+                break;
+        }
     });
 }
 
