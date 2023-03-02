@@ -24,6 +24,9 @@ const showWeather = () => {
             $(".celsius").removeClass("selected");
             $(".fahrenheit").addClass("selected");
         });
+        $(".weathercondition").text(`${data.days[0].conditions}`)
+        $(".weather-description").text(`${data.days[0].description}`)
+        $(".weather-description-r").text(`${data.days[0].description}`)
         var weathericon = data.days[0].icon;
         switch (weathericon) {
             case "clear-day":
@@ -118,4 +121,12 @@ $(function(){
         $(".weather-degreehighandlow").addClass("appear")
         $(".weather-degreehighandlow").addClass("appeared")
     },1000)
+    setTimeout(function(){
+        $(".weather-degreehighandlow").addClass("appear")
+        $(".weather-degreehighandlow").addClass("appeared")
+    },1000)
+    setTimeout(function(){
+        $(".weather-description").addClass("appear")
+        $(".weather-description").addClass("appeared")
+    },1200)
 })
